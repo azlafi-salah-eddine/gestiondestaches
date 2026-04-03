@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 24px;
+}
+
+h1 {
+    margin-bottom: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 12px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.status-yes {
+    color: #0b7a0b;
+    font-weight: bold;
+}
+
+.status-no {
+    color: #c91818;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    width: 320px;
+    max-width: 100%;
+    padding: 6px;
+}
+
+button {
+    padding: 6px 12px;
+}
