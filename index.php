@@ -20,7 +20,7 @@ $pendingTasks = $totalTasks - $doneTasks;
 
 <h1>Gestion des taches</h1>
 
-<a href="addtask.php">Ajouter</a>
+<a href="add_task.php">Ajouter</a>
 
 <table>
 <tr>
@@ -38,8 +38,8 @@ $pendingTasks = $totalTasks - $doneTasks;
     <td><?= htmlspecialchars($row['description']) ?></td>
     <td class="<?= $row['executed'] ? 'status-yes' : 'status-no' ?>"><?= $row['executed'] ? 'Oui' : 'Non' ?></td>
     <td>
-        <a href="edittask.php?id=<?= $row['id'] ?>">Edit</a>
-        <a href="deletetask.php?id=<?= $row['id'] ?>">Delete</a>
+        <a href="edit_task.php?id=<?= $row['id'] ?>">Edit</a>
+        <a href="delete_task.php?id=<?= $row['id'] ?>">Delete</a>
     </td>
 </tr>
 <?php endwhile; ?>
