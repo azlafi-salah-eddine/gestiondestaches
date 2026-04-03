@@ -26,12 +26,14 @@ td {
 }
 
 .status-yes {
-    color: #0b7a0b;
+    background-color: #c8f5cf;
+    color: #0b4d16;
     font-weight: bold;
 }
 
 .status-no {
-    color: #c91818;
+    background-color: #f9c9c9;
+    color: #7f1111;
     font-weight: bold;
 }
 
@@ -44,4 +46,10 @@ textarea {
 
 button {
     padding: 6px 12px;
+}
+
+.table-stats {
+    max-width: 900px;
+    margin-top: 10px;
+    font-weight: bold;
 }

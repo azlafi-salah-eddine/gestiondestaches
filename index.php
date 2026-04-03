@@ -2,6 +2,11 @@
 require_once __DIR__ . '/db.php';
 
 $tasks = mysqli_query($conn, "SELECT * FROM tasks ORDER BY id DESC");
+$statsResult = mysqli_query($conn, "SELECT COUNT(*) AS total, COALESCE(SUM(executed), 0) AS done FROM tasks");
+$stats = mysqli_fetch_assoc($statsResult);
+$totalTasks = (int) $stats['total'];
+$doneTasks = (int) $stats['done'];
+$pendingTasks = $totalTasks - $doneTasks;
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +45,12 @@ $tasks = mysqli_query($conn, "SELECT * FROM tasks ORDER BY id DESC");
 <?php endwhile; ?>
 
 </table>
+
+<p class="table-stats">
+    Total: <?= $totalTasks ?> |
+    Executees: <?= $doneTasks ?> |
+    Non executees: <?= $pendingTasks ?>
+</p>
 
 </body>
 </html>
